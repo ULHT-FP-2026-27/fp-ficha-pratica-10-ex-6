@@ -33,11 +33,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- to use circular queue -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>4.4</version>
+            <groupId>pt.ulusofona.deisi</groupId>
+            <artifactId>stdin-stdout-junit-helper</artifactId>
+            <version>0.1.0</version>
             <scope>test</scope>
         </dependency>
 
