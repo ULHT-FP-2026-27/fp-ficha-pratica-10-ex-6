@@ -1,13 +1,25 @@
+import java.time.Year
+
 fun main() {
+    println("Introduza o mês (1-12)")
+    val mes = readLine()?.toIntOrNull()
 
-    var taxaConversao : Float = 1.60934f
+    if (mes == null || mes < 1 || mes > 12) {
+        println("Mês inválido")
+    } else {
+        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+            println("O mês $mes tem 31 dias")
+        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+            println("O mês $mes tem 30 dias")
+        } else {
+            println("Introduza o ano (ou enter se quiser o ano atual)")
+            val ano = readLine()?.toIntOrNull() ?: Year.now().value
+            if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+                println("O mês $mes em $ano tem 29 dias")
+            } else {
+                println("O mês $mes em $ano tem 28 dias")
+            }
 
-    println("Introduza milhas")
-
-    var milhas : Short = readLine()!!.toShort()
-
-    var kms : Int = (milhas * taxaConversao).toInt()
-
-    println("$milhas milhas são $kms kms")
-
+        }
+    }
 }
