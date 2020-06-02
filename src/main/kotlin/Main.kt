@@ -1,25 +1,27 @@
-import java.time.Year
-
 fun main() {
-    println("Introduza o mês (1-12)")
-    val mes = readLine()?.toIntOrNull()
-
-    if (mes == null || mes < 1 || mes > 12) {
-        println("Mês inválido")
+    println("Introduza o primeiro numero")
+    val primeiro = readLine()?.toIntOrNull()
+    if (primeiro == null) {
+        println("Numero invalido!")
     } else {
-        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
-            println("O mês $mes tem 31 dias")
-        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
-            println("O mês $mes tem 30 dias")
+        println("Introduza o segundo numero")
+        val segundo = readLine()?.toIntOrNull()
+        if (segundo == null) {
+            println("Numero invalido!")
         } else {
-            println("Introduza o ano (ou enter se quiser o ano atual)")
-            val ano = readLine()?.toIntOrNull() ?: Year.now().value
-            if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
-                println("O mês $mes em $ano tem 29 dias")
+            println("Introduza o terceiro numero")
+            val terceiro = readLine()?.toIntOrNull()
+            if (terceiro == null) {
+                println("Numero invalido!")
             } else {
-                println("O mês $mes em $ano tem 28 dias")
+                if (primeiro > segundo && primeiro > terceiro) {
+                    println("O maior numero e: $primeiro")
+                } else if (segundo > terceiro) {
+                    println("O maior numero e: $segundo")
+                } else {
+                    println("O maior numero e: $terceiro")
+                }
             }
-
         }
     }
 }
