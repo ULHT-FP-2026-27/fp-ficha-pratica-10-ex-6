@@ -1,27 +1,24 @@
 <!-- you can use bootstrap 3 classes to format your instructions -->
 
-<div class="alert alert-info">
-    <h2>Maior de 3 números</h2>
-    <p>Neste exercício pretende-se desenvolver um programa em Kotlin que peça ao utilizador para introduzir 3 números
-        e escreva o maior no écran.</p>
-    <p>
-        Exemplo de utilização do programa:
-
+<p class="alert alert-info">
+    <h2>Para cima, para baixo</h2>
+    <p>Implemente um programa que pede ao utilizador para tentar adivinhar um número aleatório.
+        O programa deve estar no ficheiro Main.kt e deve conter as funções main(), leNumero() e
+        geraNumero() conforme explicado nos módulos da parte 2.</p>
+    <p>Exemplo de funcionamento (imaginando que o número aleatório era o 400):
     <pre>
-Introduza o primeiro numero
-7
-Introduza o segundo numero
-8
-Introduza o terceiro numero
-5
-O maior numero e: 8
-    </pre>
-
+Estou a pensar num numero entre 1 e 1000. Adivinha qual!
+100
+Para cima
+700
+Para baixo
+400
+Parabens! Acertaste ao fim de 3 tentativas
+</pre>
     Nota: Deverá respeitar rigorosamente este formato, caso contrário falhará nos testes do Drop Project. Note a não utilização de acentos.
-    </p>
-
-    <p>
-        Tendo em conta o que aprendeu, torne o seu programa robusto de forma a que não crashe por inputs inválidos.
-        Caso o utilizador introduza um input inválido, deverá mostrar a mensagem: <code>Numero invalido!</code> e terminar o programa.
-    </p>
+</p>
+<p>
+    Caso o utilizador introduza um palpite inválido, deverá mostrar a mensagem: <code>Palpite invalido</code> e voltar a pedir um palpite.
+    Os palpites inválidos contam como tentativas.
+</p>
 </div>

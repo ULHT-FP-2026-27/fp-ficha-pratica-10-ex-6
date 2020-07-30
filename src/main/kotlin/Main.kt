@@ -1,27 +1,26 @@
+fun leNumero() = readLine()?.toIntOrNull()
+
+fun geraNumero(intervalo: IntRange) = intervalo.random()
+
 fun main() {
-    println("Introduza o primeiro numero")
-    val primeiro = readLine()?.toIntOrNull()
-    if (primeiro == null) {
-        println("Numero invalido!")
-    } else {
-        println("Introduza o segundo numero")
-        val segundo = readLine()?.toIntOrNull()
-        if (segundo == null) {
-            println("Numero invalido!")
-        } else {
-            println("Introduza o terceiro numero")
-            val terceiro = readLine()?.toIntOrNull()
-            if (terceiro == null) {
-                println("Numero invalido!")
-            } else {
-                if (primeiro > segundo && primeiro > terceiro) {
-                    println("O maior numero e: $primeiro")
-                } else if (segundo > terceiro) {
-                    println("O maior numero e: $segundo")
-                } else {
-                    println("O maior numero e: $terceiro")
-                }
-            }
+    val intervalo = 1..1000
+    var tentativas = 0
+    val numero = geraNumero(intervalo)
+
+    println("Estou a pensar num numero entre ${intervalo.first} e ${intervalo.last}." +
+            " Adivinha qual!")
+
+    do {
+        val palpite = leNumero()
+        tentativas++
+        when {
+            palpite == null -> println("Palpite invalido")
+            palpite !in intervalo -> println("Palpite invalido")
+            palpite < numero -> println("Para cima")
+            palpite > numero -> println("Para baixo")
+            else -> println("Parabens! Acertaste ao fim de " +
+                    "$tentativas tentativas"
+            )
         }
-    }
+    } while (palpite != numero)
 }

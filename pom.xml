@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pt.ulusofona.lusofonax.fp</groupId>
-    <artifactId>maior-3-numeros</artifactId>
+    <artifactId>para-cima-para-baixo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -37,6 +37,13 @@
             <groupId>pt.ulusofona.deisi</groupId>
             <artifactId>stdin-stdout-junit-helper</artifactId>
             <version>0.1.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.mockk</groupId>
+            <artifactId>mockk</artifactId>
+            <version>1.10.0</version>
             <scope>test</scope>
         </dependency>
 
