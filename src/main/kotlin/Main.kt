@@ -22,5 +22,5 @@ fun main() {
                     "$tentativas tentativas"
             )
         }
-    } while (palpite != numero)
+    } while(palpite != numero)
 }
